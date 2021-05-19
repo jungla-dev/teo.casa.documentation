@@ -6,6 +6,7 @@
 
  - [Layout](#layout)
    - [Header](#header)
+     [Para editar el Header](#para-editar-el-header)
    - [Contenido](#contenido) 
    - [Footer](#footer)
 - [Páginas](#paginas)
@@ -56,9 +57,9 @@ El layout de la página está construido por elementos minimalistas.
 
 Al crear una nueva página dentro de administrador de contenidos (Wordpress), existen dos lementso constantes en el diseño:
 
-​	*[El Header]('#header')
+​	*[Header](#header)
 
-​	*El Footer
+​	*[Footer](#footer)
 
 Mistras que el resto del contenido varía entre:
 
@@ -70,29 +71,36 @@ Mistras que el resto del contenido varía entre:
 
 ​	*Tienda
 
+
+
 #### Elementos de diseño de layout
 
 
 
 ##### Paleta de color
 
-| Tipo             | Código rgb | Código HEX | Elementos |
-| ---------------- | ---------- | ---------- | --------- |
-| Color Primario   | 1.3.0      |            |           |
-| Color Secundario |            |            |           |
+| Tipo             | Código rgb       | Código HEX | Elementos                               |
+| ---------------- | ---------------- | ---------- | --------------------------------------- |
+| Color Primario   | rgb(240 240 241) | \#f0f0f1   | background-color                        |
+| Color Secundario | rgb(88 89 91)    | \#58595b   | h1, h2, h3, h4, h5, h6, p, a *(textos)* |
+| Color Auxiliar   | rgb(234 234 234) | \#eaeaea   | input, textarea, buttons                |
 
 
 
 ##### Fuentes tipográficas
 
-| Nombre             | Link de descarga |      | Elementos |
-| ------------------ | ---------------- | ---- | --------- |
-| FreightDispProBook |                  |      |           |
-| SofiaPro           |                  |      |           |
+| Nombre             | Link de descarga                                           |
+| ------------------ | ---------------------------------------------------------- |
+| FreightDispProBook | https://gitlab.com/jungla-dev/teo-casa/-/tree/master/fonts |
+| SofiaPro           | https://gitlab.com/jungla-dev/teo-casa/-/tree/master/fonts |
+
+
+
+___
+
+
 
 #### Header
-
-
 
 El código del header está compuesto por dos partes para lograr una animación fluida.
 
@@ -115,3 +123,77 @@ Presenta un efecto que se activa al hacer *scroll* al contenido, éste efecto es
 Puedes editar las páginas y los idiomas en el administrador de contenidos (wordpress), sin embargo de no romper algún estilo.
 
 
+
+##### Header en posición inicial 
+
+![Initial Header](https://raw.githubusercontent.com/jungla-dev/teo.casa.documentation/main/Captura%20de%20Pantalla%202021-05-18%20a%20la(s)%2020.27.25.png)
+
+
+
+##### Header despues de hacer scroll 
+
+![Header on scroll](https://github.com/jungla-dev/teo.casa.documentation/blob/main/Captura%20de%20Pantalla%202021-05-18%20a%20la(s)%2020.27.34.png?raw=true)
+
+
+
+##### Para editar el Header
+
+Para empezar, ten cuidado ;). 
+
+Si no tienes accesos al archivo **.css** que controla los estilos gráficos del  *menú secundario* bajo el nombre **topMenu** evita editar o borrar este elemento.
+
+Puedes agregar links al *menú primario* bajo el nombre **MenuScroll**, siempre y cuando mantengas el carrito de compras al final de la lista para no romper los estilos.
+
+
+
+<img src="https://github.com/jungla-dev/teo.casa.documentation/blob/main/menu-control.png?raw=true" alt="menu" style="zoom:50%;" />
+
+
+
+#### Contenido
+
+El contenido de cada página es flexible, aunque el color de los textos y la tipografía están determinados por los estilos creados para este tema. 
+
+Al crear una página usando wordpress, se asignarán automáticamente los elementos [Header](#header) y [Footer](#footer).
+
+
+
+### Footer
+
+
+
+El footer es un elemento que se despliega en la página a partir de un `widget de texto de wordpress`. Destro de este widget, existe un código html muy simple:
+
+```html
+<div class="footer-container">
+  <ul class="socialMedia">
+    <li>
+      <a href="https://www.facebook.com/casateomx/" target="_blank" 	 rel="noopener">Facebook</a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/casateomx/" target="_blank" rel="noopener">Instagram</a>
+    </li>
+    <li>
+      <a href="https://www.airbnb.es/rooms/47470922?preview_for_ml=true&amp;source_impression_id=p3_1610390457_qihtwLhK8g1lCXi8&amp;guests=1&amp;adults=1" rel="noopener">Airbnb</a>
+    </li>
+  </ul>
+    <div class="tiny-logo"><img class="alignnone size-full wp-image-190" src="https://teo.casa/wp-content/uploads/2021/05/CasaTeo_IconoGris-fav-01.png" alt="" width="228" height="228" />
+    </div>
+   	<div class="direction">
+      <div>Francisco Petrarca 254 Col. Polanco 11560,
+      Miguel Hidalgo, Ciudad de México</div>
+      <div>www.teo.casa</div>
+      <div>By Enrique Olvera</div>
+      <div>
+    </div>
+  </div>
+</div>
+```
+
+
+
+Es posible editar este código con el editor de texto que ofrece WordPress, pero es ideal hacerlo a través del código `html` para evitar romper el código.
+
+
+
+<img src="https://github.com/jungla-dev/teo.casa.documentation/blob/main/footer-widget.png?raw=true" alt="footer" style="zoom:50%;" />
